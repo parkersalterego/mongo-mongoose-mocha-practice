@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const assert = require('assert');
 const User = require('../src/user');
-const BlogPost = require('../src/src/blogPost');
+const BlogPost = require('../src/blogPost');
 
 describe('Middleware', () => {
 
@@ -22,6 +22,7 @@ describe('Middleware', () => {
     });
 
     it('users clean up dangling blog posts on remove', (done) => {
+        console.log('working')
         joe.remove()
         .then(() => BlogPost.count())
         .then((count) => {
